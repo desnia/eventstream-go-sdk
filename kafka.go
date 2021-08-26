@@ -132,7 +132,6 @@ func newKafkaClient(brokers []string, prefix string, config ...*BrokerConfig) (*
 
 	writerConfig := &kafka.WriterConfig{
 		Brokers:  brokers,
-		Balancer: &kafka.LeastBytes{},
 	}
 
 	readerConfig := &kafka.ReaderConfig{
